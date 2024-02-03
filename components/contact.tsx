@@ -4,9 +4,11 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
-import toast from "react-hot-toast";
+// import { sendEmail } from "@/actions/sendEmail";
+// import SubmitBtn from "./submit-btn";
+// import toast from "react-hot-toast";
+// import emailjs from "emailjs-com";
+// import { Button } from "@react-email/components";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -32,14 +34,14 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-        chandimahashan111@gmail.com
+        Please contact me directly through{" "}
+        <a className="font-medium" href="mailto:chandimahashan111@gmail.com">
+          chandimahashan111@gmail.com
         </a>{" "}
-        or through this form.
+        
       </p>
 
-      <form
+      {/* <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
@@ -50,9 +52,9 @@ export default function Contact() {
           }
 
           toast.success("Email sent successfully!");
-        }}
-      >
-        <input
+        }} */}
+      {/* > */}
+        {/* <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
@@ -66,9 +68,26 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
-        />
-        <SubmitBtn />
-      </form>
+        /> */}
+        <button
+  type="button"
+  onClick={() => {
+    window.location.href = "mailto:chandimahashan111@gmail.com";
+  }}
+  style={{
+    background: "#000", // Black background color
+    color: "#fff", // White text color
+    border: "none",
+    cursor: "pointer",
+    padding: "10px 20px", // Adjust padding as needed
+    borderRadius: "5px", // Optional: Add rounded corners
+    fontSize: "16px", // Optional: Adjust font size
+  }}
+>
+  Send Email
+</button>
+
+      {/* </form> */}
     </motion.section>
-  );
+  );
 }
