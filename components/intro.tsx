@@ -63,10 +63,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Chandima.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> of{" "}
-        <span className="font-bold">undergraduated</span> University Of Moratuwa. I enjoy
-        building <span className="italic">sites</span>.
+  <span className="font-bold" style={{ color: 'white' }}>Hello, I'm Chandima.</span> I'm a{" "}
+<span className="font-bold" style={{ color: 'white' }}>full-stack developer</span> and a recent graduate from the <span style={{ color: 'white' }}>University of Moratuwa</span>. I specialize in building <span className="italic" style={{ color: 'white' }}>websites</span>.
+
       </motion.h1>
 
       <motion.div
@@ -85,7 +84,10 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+       <span className="blote" style={{ color: 'white' }}>Contact me here{" "}</span>
+
+
+
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
